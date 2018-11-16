@@ -1,39 +1,39 @@
 package octopussy;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import octopussy.*;
 
 public class OctopussyTest {
 	Octopussy oc = new Octopussy();
 	@Test
-	void testAusgabe() {
+	public void testAusgabe() {
 		assertEquals("1", oc.game(1));
 	}
 	@Test
-	void testAusga() {
+	public void testAusga() {
 		assertEquals("Octopussy", oc.game(8));
 	}
 	@Test
-	void testAusgaba() {
+	public void testAusgaba() {
 		assertEquals("Octopussy", oc.game(16));
 	}
 	@Test
-	void testAusgabee() {
+	public void testAusgabee() {
 		assertEquals("Octopussy", oc.game(18));
 	}
 	@Test
-	void testAusgab() {
+	public void testAusgab() {
 		assertEquals("Octopussy", oc.game(80));
 	}
 	@Test
-	void testAus() {
+	public void testAus() {
 		assertEquals("17", oc.game(17));
 	}
 	@Test
-	void testAll() {
+	public void testAll() {
 		for(int i = 1; i<= 200; i++) {
 			if(i%8==0) {
 				assertEquals("Octopussy", oc.game(i));
